@@ -6,6 +6,7 @@ default-run = "bin"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+#注释掉下面恢复正常
 core = {path = "../core"}
 tokio = {workspace = true}
 salvo = {workspace = true}
