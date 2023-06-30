@@ -1,0 +1,10 @@
+[workspace]
+members = [
+  "bin",
+  "core",
+]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+salvo = {version ="*", features = ["oapi"]}
