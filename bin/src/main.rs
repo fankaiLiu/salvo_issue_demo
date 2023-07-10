@@ -1,9 +1,19 @@
-use salvo::{endpoint, Response};
-
+use salvo::{prelude::ToSchema};
+use serde::{Deserialize, Serialize};
 fn main() {
     println!("Hello, world!");
 }
-#[endpoint]
-async fn hello(res: &mut Response) {
-	res.render("Hello");
+
+#[derive(ToSchema,Deserialize,Serialize)]
+struct  A{
+    a:String,
+}
+//work #[derive(Deserialize,Serialize)]
+//not work
+#[derive(ToSchema,Deserialize,Serialize)]
+
+struct B{
+    #[serde(flatten)]
+    a:A,
+    b:String,
 }

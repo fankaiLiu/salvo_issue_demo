@@ -130,8 +130,8 @@ checksum = "604178f6c5c21f02dc555784810edfb88d34ac2c73b2eae109655649ee73ce3d"
 name = "bin"
 version = "0.1.0"
 dependencies = [
- "core",
  "salvo",
+ "serde",
  "tokio",
 ]
 
@@ -218,10 +218,6 @@ dependencies = [
  "time",
  "version_check",
 ]
-
-[[package]]
-name = "core"
-version = "0.1.0"
 
 [[package]]
 name = "cpufeatures"
